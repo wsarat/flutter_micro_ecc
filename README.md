@@ -55,18 +55,19 @@ Uint8List _aliceSharedSecret = _ecdh.computeSharedSecret(_alice.privateKey, _bob
 # Example Application
 
 
-![Startup](./docs/Startup.png | width=48)
+Generate a keypair by clicking on the `Generate` button.
 
-- Generate a keypair by clicking on the `Generate` button.
+<img src="./samples/Startup.png" width="192">
 
-![GenerateKeyPair](./docs/GenerateKeyPair.png | width=48)
 
 - Compute the shared secret by clicking on the `Compute` button.
 
-![ComputeSharedSecret](./docs/ComputeSharedSecret.png | width=48)
+<img src="./samples/GenerateKeyPair.png" width="192">
+
 
 - The &#9989; indicates the shared secret on both the nodes is equal.
 
+<img src="./samples/ComputeSharedSecret.png" width="192">
 
 # Notes
 I developed this library because I could not find any decent clean solution to facilitate the ECDH key exchange. The functionality may still be limited though. Please feel free to contribute to this library, in case you find any functionality is missing.
