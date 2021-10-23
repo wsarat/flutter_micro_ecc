@@ -2,6 +2,12 @@
 
 micro-ecc plugin for Flutter.
 
+
+[![likes](https://badges.bar/flutter_micro_ecc/likes)](https://pub.dev/packages/flutter_micro_ecc/score)
+[![popularity](https://badges.bar/flutter_micro_ecc/popularity)](https://pub.dev/packages/flutter_micro_ecc/score)
+[![pub points](https://badges.bar/flutter_micro_ecc/pub%20points)](https://pub.dev/packages/flutter_micro_ecc/score)
+
+
 # Alpha version
 This library is actively developed alongside production apps, and the API will evolve as we continue our way to version 1.0.
 
