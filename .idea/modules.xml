@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flutter_micro_ecc.iml" filepath="$PROJECT_DIR$/flutter_micro_ecc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/flutter_micro_ecc_android.iml" filepath="$PROJECT_DIR$/android/flutter_micro_ecc_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/flutter_micro_ecc_example_android.iml" filepath="$PROJECT_DIR$/example/android/flutter_micro_ecc_example_android.iml" />
+    </modules>
+  </component>
+</project>
