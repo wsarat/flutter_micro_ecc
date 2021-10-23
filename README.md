@@ -1,6 +1,6 @@
 # flutter_micro_ecc
 
-A new flutter plugin project.
+micro-ecc plugin for Flutter.
 
 # Alpha version
 This library is actively developed alongside production apps, and the API will evolve as we continue our way to version 1.0.
