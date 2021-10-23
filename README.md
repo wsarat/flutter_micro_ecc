@@ -55,15 +55,15 @@ Uint8List _aliceSharedSecret = _ecdh.computeSharedSecret(_alice.privateKey, _bob
 # Example Application
 
 
-![Startup](./docs/Startup.png)
+![Startup](./docs/Startup.png | width=48)
 
 - Generate a keypair by clicking on the `Generate` button.
 
-![GenerateKeyPair](./docs/GenerateKeyPair.png)
+![GenerateKeyPair](./docs/GenerateKeyPair.png | width=48)
 
 - Compute the shared secret by clicking on the `Compute` button.
 
-![ComputeSharedSecret](./docs/ComputeSharedSecret.png)
+![ComputeSharedSecret](./docs/ComputeSharedSecret.png | width=48)
 
 - The &#9989; indicates the shared secret on both the nodes is equal.
 
