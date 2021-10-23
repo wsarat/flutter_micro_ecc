@@ -65,7 +65,7 @@ Uint8List _aliceSharedSecret = _ecdh.computeSharedSecret(_alice.privateKey, _bob
 
 ![ComputeSharedSecret](./docs/ComputeSharedSecret.png)
 
-- The &#9989; indicates the shared seret on both the nodes is equal.
+- The &#9989; indicates the shared secret on both the nodes is equal.
 
 
 # Notes
