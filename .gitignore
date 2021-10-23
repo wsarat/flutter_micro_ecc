@@ -10,6 +10,5 @@ doc/api/**
 
 # Unsupported platforms
 
-macos
 windows
 linux
