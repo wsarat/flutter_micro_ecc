@@ -1,5 +1,5 @@
 name: flutter_micro_ecc
-description: micro-ecc port for Flutter
+description: micro-ecc plugin for Flutter
 version: 0.0.1
 license: MIT
 repository: https://github.com/swanav/flutter_micro_ecc
