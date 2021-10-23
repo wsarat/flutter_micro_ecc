@@ -8,39 +8,7 @@ import 'package:ffi/ffi.dart';
 
 import 'bindings/micro_ecc.bindings.g.dart';
 
-class EcdhCurve {
-  static const SECP160R1 = EcdhCurve(1);
-  static const SECP192R1 = EcdhCurve(2);
-  static const SECP224R1 = EcdhCurve(3);
-  static const SECP256R1 = EcdhCurve(4);
-  static const SECP256K1 = EcdhCurve(5);
-  final int curveId;
-  const EcdhCurve(this.curveId);
-  Pointer<uECC_Curve_t> getNative(MicroEcc ecc) {
-    switch (curveId) {
-      case 1:
-        return ecc.uECC_secp160r1();
-      case 2:
-        return ecc.uECC_secp192r1();
-      case 3:
-        return ecc.uECC_secp224r1();
-      case 4:
-        return ecc.uECC_secp256r1();
-      case 5:
-        return ecc.uECC_secp256k1();
-    }
-    throw UnimplementedError();
-  }
-}
-
-class EcdhKeyPair {
-  Uint8List privateKey;
-  Uint8List publicKey;
-  EcdhCurve curve;
-
-  EcdhKeyPair(this.privateKey, this.publicKey, this.curve);
-}
-
+/// Wrapper class for Ecdh operations.
 class Ecdh {
   final DynamicLibrary _lib = Platform.isAndroid
       ? DynamicLibrary.open("libmicro_ecc.so")
@@ -122,5 +90,53 @@ class Ecdh {
     }
 
     return secret;
+  }
+}
+
+/// Container for a public/private key pair
+class EcdhKeyPair {
+  Uint8List privateKey;
+  Uint8List publicKey;
+  EcdhCurve curve;
+
+  /// Create a new key pair
+  EcdhKeyPair(this.privateKey, this.publicKey, this.curve);
+}
+
+/// Opaque pointers to Ecdh curves
+class EcdhCurve {
+  /// SECP160R1
+  static const SECP160R1 = EcdhCurve._(1);
+
+  /// SECP192R1
+  static const SECP192R1 = EcdhCurve._(2);
+
+  /// SECP224R1
+  static const SECP224R1 = EcdhCurve._(3);
+
+  /// SECP256R1
+  static const SECP256R1 = EcdhCurve._(4);
+
+  /// SECP256K1
+  static const SECP256K1 = EcdhCurve._(5);
+
+  final int _curveId;
+
+  const EcdhCurve._(this._curveId);
+
+  Pointer<uECC_Curve_t> getNative(MicroEcc ecc) {
+    switch (_curveId) {
+      case 1:
+        return ecc.uECC_secp160r1();
+      case 2:
+        return ecc.uECC_secp192r1();
+      case 3:
+        return ecc.uECC_secp224r1();
+      case 4:
+        return ecc.uECC_secp256r1();
+      case 5:
+        return ecc.uECC_secp256k1();
+    }
+    throw UnimplementedError();
   }
 }

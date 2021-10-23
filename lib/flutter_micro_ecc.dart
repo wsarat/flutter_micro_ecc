@@ -1,1 +1,1 @@
-export 'ecdh.dart';
+export 'src/ecdh.dart';
