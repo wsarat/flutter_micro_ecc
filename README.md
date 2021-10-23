@@ -2,14 +2,56 @@
 
 A new flutter plugin project.
 
-## Getting Started
+# Alpha version
+This library is actively developed alongside production apps, and the API will evolve as we continue our way to version 1.0.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Please be fully prepared to deal with breaking changes. This package must be tested on a real device.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Need a API which is currently unavailable? Please raise a issue. PRs are also appreciated.
 
+
+---
+
+> Android NDK is needed for using this library on Android.
+
+---
+
+# Features
+
+## Curves
+- SECP160R1
+- SECP192R1
+- SECP224R1
+- SECP256R1
+- SECP256K1
+
+## Operations
+- Generate Key Pair
+- Compute shared secret
+
+# Usage
+
+## Selecting a curve
+
+```
+final curve = EcdhCurve.SECP256R1;
+```
+
+## Generating a KeyPair
+
+```
+final Ecdh ecdh = Ecdh();
+EcdhKeyPair _alice = _ecdh.generateKeyPair(_curve);
+```
+
+
+## Computing the shared secret
+
+```
+final Ecdh ecdh = Ecdh();
+Uint8List _aliceSharedSecret = _ecdh.computeSharedSecret(_alice.privateKey, _bob.publicKey, _curve);
+```
+
+
+# Notes
+I developed this library because I could not find any decent clean solution to facilitate the ECDH key exchange. The functionality may still be limited though. Please feel free to contribute to this library, in case you find any functionality is missing.

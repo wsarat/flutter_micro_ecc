@@ -48,7 +48,6 @@ class Ecdh {
 
   late final _ecc = MicroEcc(_lib);
 
-  /// path to the ecdh shared library
   Ecdh() {
     uECC_RNG_Function rng = Pointer.fromFunction(_rng, 0);
     _ecc.uECC_set_rng(rng);
@@ -60,6 +59,7 @@ class Ecdh {
     return 1;
   }
 
+  /// Generate a new Public/Private Key pair based on the curve
   EcdhKeyPair generateKeyPair(
     EcdhCurve curve,
   ) {
@@ -89,6 +89,7 @@ class Ecdh {
     return EcdhKeyPair(private, public, curve);
   }
 
+  /// Compute a shared secret basd on local private key and remote public key on the curve
   Uint8List computeSharedSecret(
     Uint8List private,
     Uint8List public,
