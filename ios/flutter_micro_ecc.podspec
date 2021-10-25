@@ -5,18 +5,18 @@
 Pod::Spec.new do |s|
   s.name             = 'flutter_micro_ecc'
   s.version          = '0.0.1'
-  s.summary          = 'A new flutter plugin project.'
+  s.summary          = 'A flutter interface to micro_ecc for ECDH key exchange.'
   s.description      = <<-DESC
-A new flutter plugin project.
+A flutter interface to micro_ecc for ECDH key exchange.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://swanav.github.io'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Swanav' => 'sswanav@gmail.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/*' 'Classes/micro_ecc/uECC.c'
+  s.source_files = 'Classes/**/*'
+  s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.platform = :ios, '8.0'
-
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES', 

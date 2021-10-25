@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
-  flutter_micro_ecc: a9e3d5b17b21bf38451ea58f38b412fdcce981fb
+  flutter_micro_ecc: 17b562e0b0e35ca658ec6de463beeaef4bfbe1fe
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
