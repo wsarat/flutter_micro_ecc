@@ -1,10 +1,10 @@
 import Cocoa
 import FlutterMacOS
 
-public class FlutterMicroEccPlugin: NSObject, FlutterPlugin {
+public class SwiftFlutterMicroEccPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "flutter_micro_ecc", binaryMessenger: registrar.messenger)
-    let instance = FlutterMicroEccPlugin()
+    let instance = SwiftFlutterMicroEccPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
